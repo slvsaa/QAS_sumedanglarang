@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sumedanglarang "http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2022/3/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2022/3/untitled-ontology-8"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sumedanglarang="http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#anak_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;anak_dari">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_anak"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ayah_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;ayah_dari">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_ayah"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#dialami -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;dialami">
+        <owl:inverseOf rdf:resource="&sumedanglarang;mengalami"/>
+        <rdfs:range rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;sejarah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#dijadikan_ibukota -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;dijadikan_ibukota">
+        <owl:inverseOf rdf:resource="&sumedanglarang;memindahkan_ke"/>
+        <rdfs:range rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ibu_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;ibu_dari">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_ibu"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#istri_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;istri_dari">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_istri"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#memindahkan_ke -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;memindahkan_ke">
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#mengalami -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;mengalami">
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:range rdf:resource="&sumedanglarang;sejarah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#meninggalkan -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;meninggalkan">
+        <rdfs:range rdf:resource="&sumedanglarang;peninggalan"/>
+        <owl:inverseOf rdf:resource="&sumedanglarang;peninggalan_dari"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#peninggalan_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;peninggalan_dari">
+        <rdfs:domain rdf:resource="&sumedanglarang;peninggalan"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_anak -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_anak">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_ayah -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_ayah">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_anak"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_ibu -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_ibu">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_anak"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_istri -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_istri">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_saudara -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_saudara">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#punya_suami -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;punya_suami">
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sebelum -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;sebelum">
+        <rdfs:range rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+        <owl:inverseOf rdf:resource="&sumedanglarang;setelah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#setelah -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;setelah">
+        <rdfs:range rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#suami_dari -->
+
+    <owl:ObjectProperty rdf:about="&sumedanglarang;suami_dari">
+        <owl:inverseOf rdf:resource="&sumedanglarang;punya_suami"/>
+        <rdfs:range rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#corak -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;corak"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#detail -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;detail">
+        <rdfs:domain rdf:resource="&sumedanglarang;sejarah"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#gelar -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;gelar">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#jenis_kelamin -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;jenis_kelamin">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kata_kunci -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;kata_kunci"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#lokasi_sekarang -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;lokasi_sekarang"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#masa_jabat -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;masa_jabat">
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#nama -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;nama">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sejak -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;sejak"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tahun -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;tahun">
+        <rdfs:domain rdf:resource="&sumedanglarang;sejarah"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#urutan -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;urutan">
+        <rdfs:domain rdf:resource="&sumedanglarang;raja"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#wafat -->
+
+    <owl:DatatypeProperty rdf:about="&sumedanglarang;wafat">
+        <rdfs:domain rdf:resource="&sumedanglarang;tokoh"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kandage -->
+
+    <owl:Class rdf:about="&sumedanglarang;kandage">
+        <rdfs:subClassOf rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#peninggalan -->
+
+    <owl:Class rdf:about="&sumedanglarang;peninggalan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#raja -->
+
+    <owl:Class rdf:about="&sumedanglarang;raja">
+        <rdfs:subClassOf rdf:resource="&sumedanglarang;tokoh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sejarah -->
+
+    <owl:Class rdf:about="&sumedanglarang;sejarah"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tempat_pemerintahan -->
+
+    <owl:Class rdf:about="&sumedanglarang;tempat_pemerintahan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tentang -->
+
+    <owl:Class rdf:about="&sumedanglarang;tentang"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tokoh -->
+
+    <owl:Class rdf:about="&sumedanglarang;tokoh"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#asal_usul -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;asal_usul">
+        <rdf:type rdf:resource="&sumedanglarang;tentang"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Batara Tuntang Buana bersabda &quot;Ingsun Medal Ingsun Madangan&quot; (aku lahir aku memberikan penerangan) yang sekarang dijadikan nama Sumedang</sumedanglarang:nama>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Batara Tuntang Buana bersabda &quot;Ingsun Medal Ingsun Madangan&quot; (aku lahir aku memberikan penerangan) yang sekarang dijadikan nama Sumedang</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">asal usul nama</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#badik_curuk_aul -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;badik_curuk_aul">
+        <rdf:type rdf:resource="&sumedanglarang;peninggalan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Badik Curuk Aul</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">badik curuk aul</sumedanglarang:kata_kunci>
+        <sumedanglarang:peninggalan_dari rdf:resource="&sumedanglarang;mbah_jaya_perkasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#berdirisumedanglarang -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;berdirisumedanglarang">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:tahun rdf:datatype="&xsd;string">721 Masehi</sumedanglarang:tahun>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Kerajaan Tembong Agung</sumedanglarang:nama>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Kerajaan Tembong Agung ini dipimpin oleh Prabu Guru Haji Aji Putih, sebagai raja pertama. Disebutkan, Prabu Guru masih terkait tali kekeluargaan dengan Prabu Sri Baduga Maharaja dari KerajaanSunda masa itu. Dia juga mempunyai seorang putera bernama Batara Tuntang Buana yang kemudian mendirikan Kerajaan Sumedang Larang. Ketika memimpin kerajaannya yang baru ini, Batara mengganti namanya menjadi Prabu Tajimalela.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pendiri sumedang larang</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pendiri tembong agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_guru_haji_putih"/>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#berubahmenjadikabupatensumedang -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;berubahmenjadikabupatensumedang">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:tahun rdf:datatype="&xsd;string">1579</sumedanglarang:tahun>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Adanya pengakuan (pretensi) atas seluruh wilayah Jawa Barat kecuali Banten dan Cirebon kepada Belanda (VOC) yang menyebabkan seluruh wilayah Jawa Barat kecuali Banten dan Cirebon, dianggap sebagai wilayah Mataram di bagian barat Pulau Jawa berada dibawah Mataram. Sejak saat itu Kerajaan Sumedang Larang berubah statusnya menjadi Kabuphatian Sumedang di bawah kekuasaan Mataram. Sultan Agung kemudian secara resmi mengangkat Raden Aria Suriadiwangsa menjadi Bupati Sumedang yang pertama.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">berubah menjadi kabupaten sumedang</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">hancur</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kabupaten sumedang</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">runtuh</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ciguling -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;ciguling">
+        <rdf:type rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Ciguling (sekarang sekitar Sumedang Selatan)</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ciguling</sumedanglarang:kata_kunci>
+        <sumedanglarang:dijadikan_ibukota rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#cipameungpeuk -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;cipameungpeuk">
+        <rdf:type rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Cipameungpeuk</sumedanglarang:nama>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Karena Perpindahan ini menunjukkan tanda bahwa kerajaan ini belum mempunyai keraton yang permanen sebagai tempat tinggal raja dan pusat pemerintahan</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">cipameungpeuk</sumedanglarang:kata_kunci>
+        <sumedanglarang:dijadikan_ibukota rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#corak_kerajaan -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;corak_kerajaan">
+        <rdf:type rdf:resource="&sumedanglarang;tentang"/>
+        <sumedanglarang:corak rdf:datatype="&xsd;string">Islam</sumedanglarang:corak>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">corak</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">islam</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">sejak</sumedanglarang:kata_kunci>
+        <sumedanglarang:sejak rdf:datatype="&xsd;string">sejak ratu umun menikah dengan pangeran santri</sumedanglarang:sejak>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#daerah -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;daerah">
+        <rdf:type rdf:resource="&sumedanglarang;tentang"/>
+        <sumedanglarang:lokasi_sekarang rdf:datatype="&xsd;string">Jawa Barat, Banten, Cirebon dan Jayakarta (Batavia)</sumedanglarang:lokasi_sekarang>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">daerah kekuasaan</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kandage_lante -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;kandage_lante">
+        <rdf:type rdf:resource="&sumedanglarang;tentang"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Mbah Jaya Perkasa, Nangann, Kodang Hapa, dan Terong Peot (Kandage Lante)</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kandage lante</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">keempat penjabat</sumedanglarang:kata_kunci>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">semasa kejayaan Pajajaran, ada empat pejabat tinggi Pajajaran yang berasal dari Sumedang yaitu Mbah Jaya Perkasa, Nangann, Kodang Hapa, Terong Peot. Keempat orang ini mulanya mengabdi pada Kerajaan Pajajaran. Ketika Kerajaan Pajajaran runtuh, keempat pejabat tinggi ini diamanahkan untuk menyerahkan mahkota bernama Binokasih, dari Raja Pajajaran waktu itu (Raja Mulya Surya Kencana), kepada Prabu Geusan Ulun. Kemudian keempat petinggi kerajaan tadi atau Kandage Lante itu mengabdi kepada Prabu Geusan Ulun, diangkat sebagai panglima dan penasihat.</sumedanglarang:detail>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kerajaanotonom -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;kerajaanotonom">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Pada masa pemerintahan Prabu Geusan Ulun, Sumedang Larang tampil sebagai kerajaan yang otonom dan merdeka. Wilayahnya meliputi daerah Bandung (kabupaten) sekarang, Karawang, Ciasem, Pamanukan dan Indramayu.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">merdeka</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">otonom</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#keris_ki_dukun -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;keris_ki_dukun">
+        <rdf:type rdf:resource="&sumedanglarang;peninggalan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Keris Ki Dukun</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ki dukun</sumedanglarang:kata_kunci>
+        <sumedanglarang:peninggalan_dari rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#keris_panunggul_naga -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;keris_panunggul_naga">
+        <rdf:type rdf:resource="&sumedanglarang;peninggalan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Keris Panunggul Naga</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">panunggul naga</sumedanglarang:kata_kunci>
+        <sumedanglarang:peninggalan_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kodang_hapa -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;kodang_hapa">
+        <rdf:type rdf:resource="&sumedanglarang;kandage"/>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Batara Sang Hyang Kodang Hapa</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Kodang Hapa</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">batara sang hyang kodang hapa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">hapa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kodang</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kondang</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#kutamaya -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;kutamaya">
+        <rdf:type rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Kutamaya (sekarang sebelah barat Kota Sumedang)</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kutamaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:dijadikan_ibukota rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#mahkota_binokasih -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;mahkota_binokasih">
+        <rdf:type rdf:resource="&sumedanglarang;peninggalan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Mahkota Binokasih</sumedanglarang:nama>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Mahkota Binokasih adalah mahkota Kerajaan Pajajaran yang diberikan kepada Prabu Geusan Ulun sebagai tanda bahwa Kerajaan Sumedang Larang sebagai penerus Kerajaan Pajajaran</sumedanglarang:detail>
+        <sumedanglarang:lokasi_sekarang rdf:datatype="&xsd;string">Mahkota Raja Pajajaran ini sekarang disimpan di Gedung Pusaka, Museum Prabu Geusan Ulun – Karaton Sumedang Larang dalam pengelolaan Yayasan Nazhir Wakaf Paneran Sumedang di Kota Sumedang.</sumedanglarang:lokasi_sekarang>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">binokasih</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">mahkota pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:peninggalan_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#mbah_jaya_perkasa -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;mbah_jaya_perkasa">
+        <rdf:type rdf:resource="&sumedanglarang;kandage"/>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Batara Sang Hyang Hawu</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Mbah Jaya Perkasa</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">batara sang hyang hawu</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">hawu</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">jaya perkasa</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">mbah jaya perkasa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">sang hyang hawu</sumedanglarang:kata_kunci>
+        <sumedanglarang:meninggalkan rdf:resource="&sumedanglarang;badik_curuk_aul"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#nangann -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;nangann">
+        <rdf:type rdf:resource="&sumedanglarang;kandage"/>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Batara Dipati Wiradijaya</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Nangann</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">batara dipati wiradijaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">dipati wiradijaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">nangan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">nangann</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#negarabawahanpajajaran -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;negarabawahanpajajaran">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Saat pemerintahan digantikan dengan puteri Sunan Pagulingan yaitu Ratu Istri Rajamantri. Pada masa ini status Sumedang Larang adalah negara bawahan dari Kerajaan Pajajaran. Hal ini terjadi karena Ratu Istri Rajamantri kemudian diambil sebagai isteri oleh putera Prabu Surawisesa (yang dikenal sebagai Prabu Siliwangi) dari Kerajaan Pajajaran.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">bawah pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">bawah raja pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#nyi_mas_cukang_gedengwaru -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;nyi_mas_cukang_gedengwaru">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Nyi Mas Cukang Gedengwaru</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">cukang gedengwaru</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">istri pertama</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:ibu_dari rdf:resource="&sumedanglarang;pangeran_rangga_gede"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;pangeran_rangga_gede"/>
+        <sumedanglarang:punya_suami rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:istri_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#nyimas_ratu_patuakan -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;nyimas_ratu_patuakan">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">7</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Nyimas Ratu Patuakan</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan sunan patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">nyimas patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">nyimas ratu patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin ketujuh</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja ketujuh</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu kedua</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;sunan_patuakan"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;sunan_patuakan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#pangeran_rangga_gede -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;pangeran_rangga_gede">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Pangeran Rangga Gede</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">anak istri pertama</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">rangga gede</sumedanglarang:kata_kunci>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;nyi_mas_cukang_gedengwaru"/>
+        <sumedanglarang:punya_ibu rdf:resource="&sumedanglarang;nyi_mas_cukang_gedengwaru"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#pangeran_santri -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;pangeran_santri">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Pangeran Kusumadinata</sumedanglarang:nama>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Pangeran Santri</sumedanglarang:gelar>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kusumadinata</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">santri</sumedanglarang:kata_kunci>
+        <sumedanglarang:ayah_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_istri rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#pedang_ki_mastak -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;pedang_ki_mastak">
+        <rdf:type rdf:resource="&sumedanglarang;peninggalan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Pedang Ki Mastak</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">mastak</sumedanglarang:kata_kunci>
+        <sumedanglarang:peninggalan_dari rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#peralihankekuasaandaripajajaran -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;peralihankekuasaandaripajajaran">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Peralihan kekuasaan Pajajaran ke Kerajaan Sumedang Larang terjadi ketika Kerajaan Pajajaran diambang keruntuhan, terjadi pergantian pimpinan tertinggi tahta pada Kerajaan Sumedang Larang dari Ratu Pucuk umun kepada Prabu Geusan Ulun. Peralihan kekuasaan Pajajaran ke Kerajaan Sumedang Larang secara simbolis dilakukan dengan penyerahan mahkota emas Kerajaan Pajajaran kepada Prabu Geusan Ulun. Ini berarti, Kerajaan Sumedang Larang adalah penerus Kerajaan Pajajaran atau Kerajaan Sunda.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kejayaan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">penerus pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">peralihan kuasa</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#perang_cirebon -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;perang_cirebon">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">cirebon</sumedanglarang:kata_kunci>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">karena kaburnya Ratu Harisbaya ke Sumedang Larang bersama Prabu Geusan Ulun</sumedanglarang:detail>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#pindahkecipameungpeuk -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;pindahkecipameungpeuk">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:detail rdf:datatype="&xsd;string">Sunan Pagulingan sebagai raja memindahkan ibukota kerajaan ke lokasi yang baru di Cipameungpeuk. Perpindahan ini bertujuan untuk menunjukkan tanda bahwa kerajaan ini belum mempunyai keraton yang permanen sebagai tempat tinggal raja dan pusat pemerintahan.</sumedanglarang:detail>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pindah ke cipameungpeuk</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_gajah_agung -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_gajah_agung">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">2</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Prabu Gajah Agung</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">gajah agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin kedua</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">prabu gajah agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja kedua</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">setelah batara tuntang</sumedanglarang:kata_kunci>
+        <sumedanglarang:memindahkan_ke rdf:resource="&sumedanglarang;ciguling"/>
+        <sumedanglarang:meninggalkan rdf:resource="&sumedanglarang;keris_ki_dukun"/>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;prabu_lembu_agung"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_geusan_ulun -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_geusan_ulun">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:masa_jabat rdf:datatype="&xsd;string">1580 - 1608 M</sumedanglarang:masa_jabat>
+        <sumedanglarang:wafat rdf:datatype="&xsd;string">1608 M</sumedanglarang:wafat>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">9</sumedanglarang:urutan>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Prabu Geusan Ulun</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Raden Angkawijaya</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">angkawijaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">geusan ulun</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">kejayaan</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan ratu pucuk umun</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">merdeka</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">otonom</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin kesembilan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">penerus pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">peralihan kuasa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">prabu geusan ulun</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raden angkawijaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja kesembilan</sumedanglarang:kata_kunci>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;kerajaanotonom"/>
+        <sumedanglarang:meninggalkan rdf:resource="&sumedanglarang;keris_panunggul_naga"/>
+        <sumedanglarang:meninggalkan rdf:resource="&sumedanglarang;mahkota_binokasih"/>
+        <sumedanglarang:punya_istri rdf:resource="&sumedanglarang;nyi_mas_cukang_gedengwaru"/>
+        <sumedanglarang:suami_dari rdf:resource="&sumedanglarang;nyi_mas_cukang_gedengwaru"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;pangeran_rangga_gede"/>
+        <sumedanglarang:ayah_dari rdf:resource="&sumedanglarang;pangeran_rangga_gede"/>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;pangeran_santri"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;pangeran_santri"/>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;peralihankekuasaandaripajajaran"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+        <sumedanglarang:ayah_dari rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+        <sumedanglarang:suami_dari rdf:resource="&sumedanglarang;ratu_harisbaya"/>
+        <sumedanglarang:punya_istri rdf:resource="&sumedanglarang;ratu_harisbaya"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+        <sumedanglarang:punya_ibu rdf:resource="&sumedanglarang;ratu_pucuk_umun"/>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;wilayah_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_guru_haji_putih -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_guru_haji_putih">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Prabu Guru Haji Aji Putih</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">guru haji aji putih</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pendiri tembong agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_lembu_agung -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_lembu_agung">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Prabu Lembu Agung</sumedanglarang:nama>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">lembu agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_resi_tajimalela -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_resi_tajimalela">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">1</sumedanglarang:urutan>
+        <sumedanglarang:masa_jabat rdf:datatype="&xsd;string">721 - 778 M</sumedanglarang:masa_jabat>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Batara Tuntang Buana</sumedanglarang:nama>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Prabu Resi Tajimalela</sumedanglarang:gelar>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">batara tuntang buana</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin pertama</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja pendiri</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja pertama</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">resi</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">resi tajimalela</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">tajimalela</sumedanglarang:kata_kunci>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;berdirisumedanglarang"/>
+        <sumedanglarang:meninggalkan rdf:resource="&sumedanglarang;pedang_ki_mastak"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_guru_haji_putih"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;prabu_lembu_agung"/>
+        <sumedanglarang:punya_istri rdf:resource="&sumedanglarang;ratu_rangga_wulung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#prabu_siliwangi -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;prabu_siliwangi">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Prabu Siliwangi</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">siliwangi</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_istri rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#raden_suriadiwangsa -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;raden_suriadiwangsa">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">10</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Raden Aria Suriadiwangsa</sumedanglarang:nama>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Raden Suriadiwangsa</sumedanglarang:gelar>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">anak istri kedua</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">aria</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan geusan ulun</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan raden angkawijaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin kesepuluh</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raden aria suriadiwangsa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raden suriadiwangsa</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja kesepuluh</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">suriadiwangsa</sumedanglarang:kata_kunci>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;berubahmenjadikabupatensumedang"/>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;pangeran_rangga_gede"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_ibu rdf:resource="&sumedanglarang;ratu_harisbaya"/>
+        <sumedanglarang:anak_dari rdf:resource="&sumedanglarang;ratu_harisbaya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ratu_harisbaya -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;ratu_harisbaya">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Ratu Harisbaya</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">harisbaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">istri kedua</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:istri_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_suami rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:ibu_dari rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;raden_suriadiwangsa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ratu_pucuk_umun -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;ratu_pucuk_umun">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">8</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Nyimas Ratu Dewi Inten Dewata</sumedanglarang:nama>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Ratu Pucuk Umun</sumedanglarang:gelar>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan nyimas ratu patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">nyimas ratu dewi inten dewata</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin kedelapan</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja kedelapan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu ketiga</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu pucuk umun</sumedanglarang:kata_kunci>
+        <sumedanglarang:memindahkan_ke rdf:resource="&sumedanglarang;kutamaya"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;nyimas_ratu_patuakan"/>
+        <sumedanglarang:punya_ibu rdf:resource="&sumedanglarang;nyimas_ratu_patuakan"/>
+        <sumedanglarang:punya_suami rdf:resource="&sumedanglarang;pangeran_santri"/>
+        <sumedanglarang:ibu_dari rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ratu_rangga_wulung -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;ratu_rangga_wulung">
+        <rdf:type rdf:resource="&sumedanglarang;tokoh"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Ratu Rangga Wulung</sumedanglarang:nama>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">rangga wulung</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_suami rdf:resource="&sumedanglarang;prabu_resi_tajimalela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#ratu_sri_rajamantri -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;ratu_sri_rajamantri">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">4</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Ratu Istri Rajamantri</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">bawah pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">bawah raja pajajaran</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan sunan pagulingan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin keempat</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">perempuan</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja keempat</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">rajamantri</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu istri rajamantri</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">ratu pertama</sumedanglarang:kata_kunci>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;negarabawahanpajajaran"/>
+        <sumedanglarang:punya_suami rdf:resource="&sumedanglarang;prabu_siliwangi"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;sunan_guling"/>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;sunan_guling"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sunan_guling -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;sunan_guling">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">5</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Sunan Guling</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">guling</sumedanglarang:kata_kunci>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan ratu istri rajamantri</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin kelima</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja kelima</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">sunan guling</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_saudara rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;sunan_pagulingan"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;sunan_patuakan"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;sunan_patuakan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sunan_pagulingan -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;sunan_pagulingan">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">3</sumedanglarang:urutan>
+        <sumedanglarang:masa_jabat rdf:datatype="&xsd;string">998 - 1114 M</sumedanglarang:masa_jabat>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Sunan Pagulingan</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Wirajaya</sumedanglarang:nama>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pagulingan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin ketiga</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja ketiga</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">setelah gajah agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">wirajaya</sumedanglarang:kata_kunci>
+        <sumedanglarang:memindahkan_ke rdf:resource="&sumedanglarang;cipameungpeuk"/>
+        <sumedanglarang:mengalami rdf:resource="&sumedanglarang;pindahkecipameungpeuk"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;prabu_gajah_agung"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;ratu_sri_rajamantri"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#sunan_patuakan -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;sunan_patuakan">
+        <rdf:type rdf:resource="&sumedanglarang;raja"/>
+        <sumedanglarang:urutan rdf:datatype="&xsd;integer">6</sumedanglarang:urutan>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Prabu Tirtakusuma</sumedanglarang:nama>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Sunan Patuakan</sumedanglarang:gelar>
+        <sumedanglarang:jenis_kelamin rdf:datatype="&xsd;string">laki-laki</sumedanglarang:jenis_kelamin>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">menggantikan sunan guling</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pemimpin keenam</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">prabu tirtakusuma</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">raja keenam</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">sunan patuakan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">tirtakusuma</sumedanglarang:kata_kunci>
+        <sumedanglarang:punya_anak rdf:resource="&sumedanglarang;nyimas_ratu_patuakan"/>
+        <sumedanglarang:setelah rdf:resource="&sumedanglarang;nyimas_ratu_patuakan"/>
+        <sumedanglarang:punya_ayah rdf:resource="&sumedanglarang;sunan_guling"/>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;sunan_guling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tembong_agung -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;tembong_agung">
+        <rdf:type rdf:resource="&sumedanglarang;tempat_pemerintahan"/>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Kerajaan Tembong Agung</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">sebelum sumedang larang</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">tembong agung</sumedanglarang:kata_kunci>
+        <sumedanglarang:sebelum rdf:resource="&sumedanglarang;berdirisumedanglarang"/>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_guru_haji_putih"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#tempat_peninggalan -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;tempat_peninggalan">
+        <rdf:type rdf:resource="&sumedanglarang;tentang"/>
+        <sumedanglarang:lokasi_sekarang rdf:datatype="&xsd;string">Peninggalan Kerajaan Sumedang Larang sekarang berada di Gedung Pusaka, Museum Prabu Geusan Ulun – Karaton Sumedang Larang dalam pengelolaan Yayasan Nazhir Wakaf Paneran Sumedang di Kota Sumedang.</sumedanglarang:lokasi_sekarang>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">peninggalan simpan</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">tempat peninggalan</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#terong_peot -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;terong_peot">
+        <rdf:type rdf:resource="&sumedanglarang;kandage"/>
+        <sumedanglarang:gelar rdf:datatype="&xsd;string">Batara Pancar Buana</sumedanglarang:gelar>
+        <sumedanglarang:nama rdf:datatype="&xsd;string">Terong Peot</sumedanglarang:nama>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">batara pancar buana</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">pacar buana</sumedanglarang:kata_kunci>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">terong peot</sumedanglarang:kata_kunci>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2022/3/sumedanglarang#wilayah_geusan_ulun -->
+
+    <owl:NamedIndividual rdf:about="&sumedanglarang;wilayah_geusan_ulun">
+        <rdf:type rdf:resource="&sumedanglarang;sejarah"/>
+        <sumedanglarang:lokasi_sekarang rdf:datatype="&xsd;string">Wilayahnya meliputi daerah Bandung (kabupaten) sekarang, Karawang, Ciasem, Pamanukan dan Indramayu</sumedanglarang:lokasi_sekarang>
+        <sumedanglarang:kata_kunci rdf:datatype="&xsd;string">wilayah geusan ulun</sumedanglarang:kata_kunci>
+        <sumedanglarang:dialami rdf:resource="&sumedanglarang;prabu_geusan_ulun"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
